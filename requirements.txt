@@ -1,0 +1,8 @@
+Django
+django-cors-headers
+django-debug-toolbar
+django-filter
+django-rest-registration
+djangorestframework
+drf-yasg
+python-decouple
