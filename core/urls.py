@@ -17,13 +17,14 @@ Including another URLconf
 import debug_toolbar
 from django.contrib import admin
 from django.urls import path, include
-from api.urls import router
+# from api.endpoints import router
+from api.endpoints  import urlpatterns as api_urls
 from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include(router.urls)),
+     path('api/v1/', include(api_urls)),
 ]
 
 if settings.DEBUG:
