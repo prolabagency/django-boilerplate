@@ -5,4 +5,10 @@ django-filter
 django-rest-registration
 djangorestframework
 drf-yasg
+django-ckeditor
 python-decouple
+python-dotenv
+coreapi
+Pillow
+django-cleanup
+

@@ -17,6 +17,7 @@ Including another URLconf
 import debug_toolbar
 from django.contrib import admin
 from django.urls import path, include
+from django.views.generic import RedirectView
 # from api.endpoints import router
 from api.endpoints  import urlpatterns as api_urls
 from django.conf import settings
@@ -24,7 +25,9 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-     path('api/v1/', include(api_urls)),
+    path('api/v1/', include(api_urls)),
+    path('', RedirectView.as_view(url='/api/v1/swagger/')),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
 ]
 
 if settings.DEBUG:
